@@ -77,7 +77,7 @@ export default function HomeMenu() {
       {/* タイトル */}
       <h1 className="text-3xl mb-1 relative inline-block">
         Echo.NET
-        <span className="absolute bottom-0 left-0 h-1 bg-cyan-400 w-900 translate-y-1"></span>
+        <span className="absolute bottom-0 left-0 h-1 bg-cyan-400 w-450 translate-y-1"></span>
       </h1>
 
       {/* 無意味情報 */}
