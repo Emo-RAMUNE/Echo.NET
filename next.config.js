@@ -1,8 +1,8 @@
 // next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',      // すでに設定済み
-    basePath: '/Echo.NET', // ← ここを追加
-  };
-  
-  module.exports = nextConfig;
+  reactStrictMode: true,
+  output: 'standalone', // もしくは export で静的サイトの場合 'export'
+}
+
+module.exports = nextConfig
