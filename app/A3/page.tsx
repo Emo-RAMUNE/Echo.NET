@@ -83,7 +83,7 @@ export default function A3() {
       {/* 感情（点滅付き） */}
       <div className="mb-6 text-lg">
         <p>
-          REAL TIME EMOTIO：{" "}
+          REAL TIME EMOTION：{" "}
           <span className={`${blink ? "opacity-500" : "opacity-0"} transition-opacity duration-1500`}>
   {currentEmotion}
 </span>
