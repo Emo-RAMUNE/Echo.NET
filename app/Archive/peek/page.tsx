@@ -20,7 +20,7 @@ export default function Peek() {
    "https://youtu.be/niYGujjMguw",
    "https://youtu.be/yipRDI1bb8s",
    "https://youtu.be/m9vOV_nA5DM",
-   "https://youtu.be/tsp3oy815p8",{/*ここに追加可能*/}
+   "https://youtu.be/tsp3oy815p8",
   ];
 
   const handleClick = () => {
