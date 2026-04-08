@@ -17,6 +17,7 @@ export default function A3() {
     "？",
     "寂しい",
     "期待",
+    "ぼーっとしてる",
   ];
 
   const [currentEmotion, setCurrentEmotion] = useState("接続中");
