@@ -55,8 +55,7 @@ export default function HomeMenu() {
   ];
 
   return (
-    <main className="bg-blue-800 text-white h-screen flex flex-col items-left side justify-left side gap-6 p-8">
-
+   <main className="bg-blue-800 text-white min-h-screen flex flex-col items-start justify-start gap-6 p-4 md:p-8">
       {/* 右上ロゴ */}
       <div className="fixed top-2 right-3 w-20 h-auto z-30">
         <img
@@ -66,18 +65,18 @@ export default function HomeMenu() {
         />
       </div>
       {/* 中央やや右寄り画像 */}
-      <div className="absolute top-1/2 right-1/3 transform -translate-y-1/2 z-10">
-        <img
-          src="/AA.png"
-          alt="中央やや右の画像"
-          className="w-140 h-auto"    />
-      </div>
+      <div className="absolute top-1/2 right-4 md:right-1/4 transform -translate-y-1/2 z-10">
+  <img
+    src="/AA.png"
+    className="w-40 md:w-72 lg:w-96 h-auto"
+  />
+</div>
           
 
       {/* タイトル */}
       <h1 className="text-3xl mb-1 relative inline-block">
         Echo.NET
-        <span className="absolute bottom-0 left-0 h-1 bg-cyan-400 w-400 translate-y-1"></span>
+    <span className="absolute bottom-0 left-0 h-1 bg-cyan-400 w-full translate-y-1"></span>
       </h1>
 
       {/* 無意味情報 */}
