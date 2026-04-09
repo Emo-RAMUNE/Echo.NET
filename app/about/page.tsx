@@ -8,7 +8,7 @@ export default function About() {
   <img src="/project_Emo_RAMUNE_logo.png" alt="Project Emo-RAMUNE" className="w-full h-auto" />
 </div>
 
-<span className="absolute bottom-0 left-0 h-1 bg-cyan-400 w-full translate-y-1"></span>
+<span className="absolute bottom-230 left-0 h-1 bg-cyan-400 w-full translate-y-1"></span>
       
 
       <h1 className="text-3xl mb-6">Echo.NETについて</h1>
