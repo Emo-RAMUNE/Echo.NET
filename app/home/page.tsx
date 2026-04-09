@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-
 export default function HomeMenu() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -12,34 +11,29 @@ export default function HomeMenu() {
   const [coordinates, setCoordinates] = useState("");
 
   useEffect(() => {
-    // 音楽再生
     if (audioRef.current) {
       audioRef.current.volume = 0.5;
       const playPromise = audioRef.current.play();
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
-          console.log("自動再生がブラウザでブロックされました:", error);
+          console.log("自動再生がブロックされました:", error);
         });
       }
     }
 
-    // 現在時刻更新
     const interval = setInterval(() => {
       const now = new Date();
       setCurrentTime(
         now.toLocaleDateString() + " " + now.toLocaleTimeString()
       );
 
-      // 毎秒座標ランダム生成（12桁）
       const rawCoord = Array.from({ length: 12 }, () =>
         Math.floor(Math.random() * 10)
       ).join("");
       const coord = rawCoord.match(/.{1,3}/g)?.join(",") ?? rawCoord;
       setCoordinates(coord);
-
     }, 1000);
 
-    // ランダム訪問者数（固定値）
     setVisitorCount(Math.floor(Math.random() * 10000));
 
     return () => clearInterval(interval);
@@ -55,7 +49,7 @@ export default function HomeMenu() {
   ];
 
   return (
-    <main className="bg-blue-800 text-white h-screen flex flex-col items-left side justify-left side gap-6 p-8">
+    <main className="bg-blue-800 text-white min-h-screen flex flex-col items-start gap-6 p-4 md:p-8">
 
       {/* 右上ロゴ */}
       <div className="fixed top-2 right-3 w-20 h-auto z-30">
@@ -65,14 +59,30 @@ export default function HomeMenu() {
           className="w-full h-auto"
         />
       </div>
-      {/* 中央やや右寄り画像 */}
+
+      {/* 画像＋PVサムネをまとめる */}
       <div className="absolute top-1/2 right-4 md:right-1/3 transform -translate-y-1/2 z-10">
-  <img
-    src="/AA.png"
-    className="w-40 md:w-72 lg:w-96 h-auto"
-  />
-</div>
-          
+
+        {/* メイン画像 */}
+        <img
+          src="/AA.png"
+          className="w-40 md:w-72 lg:w-96 h-auto"
+        />
+
+        {/* PVサムネ（左下に被せる） */}
+        <a
+          href="https://youtu.be/gByf0jzKbvg"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute -bottom-6 -left-6 md:-bottom-20 md:-left-20 hover:scale-105 transition"
+        >
+          <img
+            src="/thumbnail.png"
+            alt="PV"
+            className="w-40 md:w-40 lg:w-80 h-auto rounded-md shadow-lg border border-white/30"
+          />
+        </a>
+      </div>
 
       {/* タイトル */}
       <h1 className="text-3xl mb-1 relative inline-block">
@@ -80,30 +90,32 @@ export default function HomeMenu() {
         <span className="absolute bottom-0 left-0 h-1 bg-cyan-400 w-full translate-y-1"></span>
       </h1>
 
-      {/* 無意味情報 */}
+      {/* 情報 */}
       <div className="text-xs opacity-70 mb-4 space-y-1">
         <p>現在時刻：{currentTime}</p>
-        <p>量子訪問者数：{visitorCount}</p>
+        <p>量子訪問者数：{visitorCount}人</p>
         <p>■■■■■：{coordinates}</p>
       </div>
 
       {/* メニュー */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 w-full max-w-xs">
         {menuItems.map((item) => (
           <Link key={item.href} href={item.href}>
-            <div className="px-3 py-1 bg-cyan-500/30 hover:bg-cyan-400/40 rounded-md cursor-pointer inline-block">
+            <div className="w-full px-3 py-2 bg-cyan-500/30 hover:bg-cyan-400/40 rounded-md cursor-pointer">
               {item.label}
             </div>
           </Link>
         ))}
       </div>
 
-      {/* 自動再生音楽 */}
+      {/* 音楽 */}
       <audio ref={audioRef} src="/welcome.wav" />
+
+      {/* フッター */}
       <div className="fixed bottom-2 right-2 text-xs opacity-25 text-white z-30">
-  このサイトはフィクションです。実在の人物・団体とは関係ありません。
-</div>
+        このサイトはフィクションです。実在の人物・団体とは関係ありません。
+      </div>
+
     </main>
-    
   );
 }
