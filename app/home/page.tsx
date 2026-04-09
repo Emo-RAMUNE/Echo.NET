@@ -10,13 +10,9 @@ export default function HomeMenu() {
   const [visitorCount, setVisitorCount] = useState(0);
   const [coordinates, setCoordinates] = useState("");
 
-  // 画像ドラッグ用
+  // 画像ドラッグ用（これはそのまま残す）
   const [imgPos, setImgPos] = useState({ x: 0, y: 0 });
   const [draggingImg, setDraggingImg] = useState(false);
-
-  // サムネドラッグ用
-  const [thumbPos, setThumbPos] = useState({ x: 0, y: 0 });
-  const [draggingThumb, setDraggingThumb] = useState(false);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -56,7 +52,6 @@ export default function HomeMenu() {
     { label: "▶ 検索", href: "/search" },
   ];
 
-  // 共通ドラッグ処理
   const handleMouseMove = (e: React.MouseEvent) => {
     if (draggingImg) {
       setImgPos((prev) => ({
@@ -64,18 +59,9 @@ export default function HomeMenu() {
         y: prev.y + e.movementY,
       }));
     }
-    if (draggingThumb) {
-      setThumbPos((prev) => ({
-        x: prev.x + e.movementX,
-        y: prev.y + e.movementY,
-      }));
-    }
   };
 
-  const stopDrag = () => {
-    setDraggingImg(false);
-    setDraggingThumb(false);
-  };
+  const stopDrag = () => setDraggingImg(false);
 
   return (
     <main
@@ -105,29 +91,6 @@ export default function HomeMenu() {
         />
       </div>
 
-      {/* サムネ（ドラッグ可＋クリックで遷移） */}
-      <div
-        className="absolute z-20 cursor-grab active:cursor-grabbing"
-        style={{
-          top: "60%",
-          right: "28%",
-          transform: `translate(${thumbPos.x}px, ${thumbPos.y}px)`,
-        }}
-        onMouseDown={() => setDraggingThumb(true)}
-      >
-        <a
-          href="https://youtu.be/gByf0jzKbvg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/thumbnail.png"
-            className="w-32 md:w-40 lg:w-72 rounded-md shadow-lg border border-white/30 hover:scale-105 transition select-none"
-            draggable={false}
-          />
-        </a>
-      </div>
-
       {/* タイトル */}
       <h1 className="text-3xl mb-1 relative inline-block">
         Echo.NET
@@ -150,6 +113,21 @@ export default function HomeMenu() {
             </div>
           </Link>
         ))}
+      </div>
+
+      {/* ▼▼ サムネ（メニューの下に配置）▼▼ */}
+      <div className="mt-6 w-full max-w-xs">
+        <a
+          href="https://youtu.be/gByf0jzKbvg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/thumbnail.png"
+            alt="PV"
+            className="w-full h-auto rounded-md border-2 border-white shadow-lg hover:scale-105 transition"
+          />
+        </a>
       </div>
 
       {/* 音楽 */}
