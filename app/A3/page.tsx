@@ -101,7 +101,7 @@ export default function A3() {
         純粋無垢で人懐っこく、夏と瓶ラムネが好きです。
       </p>
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-2">
-        感情モニターは正常稼働。保護対象の感情が確認されています。
+        感情モニターは正常稼働。保護対象の感情が確認されました。
       </p>
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-6">
         記録者からの■■の送信に失敗しました。
