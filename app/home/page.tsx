@@ -100,8 +100,8 @@ export default function HomeMenu() {
       {/* 情報 */}
       <div className="text-xs opacity-70 mb-4 space-y-1">
         <p>現在時刻：{currentTime}</p>
-        <p>量子訪問者数：{visitorCount}人</p>
-        <p>■■■■■：{coordinates}</p>
+        <p>パラレル訪問者数：{visitorCount}人</p>
+        <p>時空間座標：{coordinates}</p>
       </div>
 
       {/* メニュー */}
