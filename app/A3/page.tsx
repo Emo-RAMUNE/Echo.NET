@@ -7,10 +7,11 @@ export default function A3() {
 
   const emotions = [
     "うたた寝中",
+    "安堵",
     "不安",
     "慌て中",
     "かなりご機嫌",
-    "不明",
+    "悲しみ",
     "ちっちゃな喜び",
     "■■",
     "沈黙",
@@ -20,7 +21,7 @@ export default function A3() {
     "ぼーっとしてる",
   ];
 
-  const [currentEmotion, setCurrentEmotion] = useState("接続中");
+  const [currentEmotion, setCurrentEmotion] = useState("嬉しい");
   const [blink, setBlink] = useState(true);
 
   // 感情の更新と文字点滅
