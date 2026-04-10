@@ -98,10 +98,10 @@ export default function A3() {
         A3はEmo-RAMUNEの■■■として設計された存在です。
       </p>
        <p className="max-w-md text-left side opacity-70 leading-relaxed mb-2">
-        純粋無垢で人懐っこい性格をしています。瓶ラムネを飲むのが夢です。
+        純粋無垢で人懐っこく、瓶ラムネを飲むのが夢です。
       </p>
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-2">
-        感情モニターは正常稼働。一部保護対象の感情が確認されています。
+        感情モニターは正常稼働。保護の感情が確認されています。
       </p>
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-6">
         記録者からの■■の送信に失敗しました。
