@@ -95,13 +95,13 @@ export default function A3() {
 
       {/* 説明 */}
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-2">
-        A3はEmo-RAMUNEの■■■として設計された存在です。
+        A3はEmo-RAMUNEの■■■として設計された存在です。純粋無垢で人懐っこい性格をしています。瓶ラムネを飲むのが夢です。
       </p>
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-2">
-        現在、感情モニターに不安定な挙動が確認されています。
+        感情モニターは正常稼働。一部情報保護対象の感情が確認されています。
       </p>
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-6">
-        ■■の送信に失敗しました。
+        記録者からの■■の送信に失敗しました。
       </p>
 
       {/* 音楽再生 */}
