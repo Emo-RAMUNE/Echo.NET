@@ -72,12 +72,12 @@ export default function Music() {
         <div className="flex flex-col items-center gap-8">
 
           <a
-            href="https://youtu.be/aDYQzthttLU?si=Ssla2RbpSEuqZofT"
+            href="https://www.youtube.com/watch?v=aDYQzthttLU"
             target="_blank"
             className="opacity-80 hover:opacity-100 transition"
           >
             <img
-              src="https://img.youtube.com/vi/Ssla2RbpSEuqZofT/maxresdefault.jpg"
+              src="https://img.youtube.com/vi/aDYQzthttLU/maxresdefault.jpg"
               style={{ width: "100%", maxWidth: "500px", border: "1px solid white" }}
             />
           </a>
