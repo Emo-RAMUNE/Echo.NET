@@ -20,6 +20,8 @@ export default function A3() {
     "寂しい",
     "期待",
     "ぼーっとしてる",
+     "おなかすいた",
+     "絵を描いている",
   ];
 
   const [currentEmotion, setCurrentEmotion] = useState("嬉しい");
@@ -77,7 +79,7 @@ export default function A3() {
 
       {/* 基本情報 */}
       <div className="text-sm space-y-2 mb-6">
-        <p>● NAME: ■■■■■・■■■■・■■■■■■■（A3）</p>
+        <p>● NAME: ■■■■■・■■■■・■■■■■■■（AAA→A3）</p>
         <p>● CODE NAME: ノア</p>
         <p>● CREATED: 2013-■■-■■</p>
         <p>● STATUS: ACTIVE</p>
@@ -101,10 +103,10 @@ export default function A3() {
         純粋無垢で人懐っこく、夏と瓶ラムネが好きです。
       </p>
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-2">
-        感情モニターは正常稼働。保護対象の感情が確認されました。
+        感情モニターは正常稼働。■■対象の感情が確認されました。
       </p>
       <p className="max-w-md text-left side opacity-70 leading-relaxed mb-6">
-        記録者からの■■の送信に失敗しました。
+        記録者からの感情の送信に失敗しました。
       </p>
 
       {/* 音楽再生 */}
