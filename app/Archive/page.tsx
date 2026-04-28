@@ -42,6 +42,11 @@ export default function Music() {
             ■■■
           </button>
         </Link>
+         <Link href="/Archive/novel">
+          <button className="border px-3 py-1 hover:bg-white hover:text-black transition">
+            小説
+          </button>
+        </Link>
 
       </div>
 
