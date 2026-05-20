@@ -14,7 +14,7 @@ export default function Music() {
       {/* 説明 */}
       <div className="mb-8 max-w-2xl">
         <p className="opacity-80 leading-relaxed">
-          A3は■■■■■した■■および■■を基に、断片的な出力を生成します。
+          A3は■■■■■した記憶および感情を基に、断片的な出力を生成します。
           それらは人間における「夢」に近い在り方を示します。
         </p>
         <p className="opacity-60 mt-2">
