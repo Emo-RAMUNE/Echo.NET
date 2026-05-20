@@ -14,7 +14,7 @@ export default function About() {
 
       <p className="mb-4 leading-relaxed">
   <span className="opacity-80">
-    　Echo.NETは、■■された■■と■■を■■■■■するための時空間通信ネットワークです。
+    　Echo.NETは、■■された記憶と感情、情報を■■■■■するための時空間通信ネットワークです。
   </span>
   <br />
   <span className="opacity-50 text-sm">
