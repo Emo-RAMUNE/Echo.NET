@@ -7,8 +7,8 @@ export default function Hidden() {
   const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   // ダウンロード画像
-  const archiveImagePath = "/public/「txt」に拡張子を.png"; // publicフォルダ内
-  const archiveImageName = "「txt」に拡張子を.png";
+  const archiveImagePath = "/public/「荳肴?縺ｪ繝輔ぃ繧､繝ｫ縺ｮ萓ｵ蜈･繧堤｢ｺ隱阪＠縺ｾ縺励◆.png"; // publicフォルダ内
+  const archiveImageName = "荳肴?縺ｪ繝輔ぃ繧､繝ｫ縺ｮ萓ｵ蜈･繧堤｢ｺ隱阪＠縺ｾ縺励◆.png";
 
   return (
     <main className="bg-blue-800 text-white min-h-screen flex flex-col items-center p-8">
@@ -56,7 +56,7 @@ export default function Hidden() {
         <a href={archiveImagePath} download={archiveImageName}>
           <img
             src={archiveImagePath}
-            alt="荳肴?縺ｪ繝輔ぃ繧､繝ｫ縺ｮ萓ｵ蜈･繧堤｢ｺ隱阪＠縺ｾ縺励◆"
+            alt="荳肴?縺ｪ繝輔ぃ繧､繝ｫ縺ｮ萓ｵ蜈･繧堤｢ｺ隱阪＠縺ｾ縺励◆.png"
             className="max-w-[300px] border border-white hover:opacity-80 transition cursor-pointer"
           />
         </a>
