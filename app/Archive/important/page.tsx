@@ -2,43 +2,74 @@ import Link from "next/dist/client/link";
 
 export default function Hidden() {
 
-    const videoId = "swU7-Yy04Rs"; // ←ここを変更
-    const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-    const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-  
-    return (
-      <main className="bg-blue-800 text-white min-h-screen flex flex-col items-center p-8">
-        {/* 右上ロゴ */}
-<div className="fixed top-4 right-4 w-32 h-auto z-50">
-  <img src="/project_Emo_RAMUNE_logo.png" alt="Project Emo-RAMUNE" className="w-full h-auto" />
-</div>
-        <div className="mb-6">
-  <Link href="/">
-    <button className="border px-3 py-1 hover:bg-white hover:text-black transition">
-      ← メインメニューに戻る
-    </button>
-  </Link>
-</div>
-  
-        <h1 className="mb-6 text-center">
-          「忘れないで、私はまだここにいる」
-        </h1>
-  
-        <p className="opacity-40 mb-8 text-center">
-          現在アクセス可能な■■■は以下の通りです。
+  const videoId = "swU7-Yy04Rs"; // ←ここを変更
+  const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+  const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+  // ダウンロード画像
+  const archiveImagePath = "/public/「txt」に拡張子を.png"; // publicフォルダ内
+  const archiveImageName = "「txt」に拡張子を.png";
+
+  return (
+    <main className="bg-blue-800 text-white min-h-screen flex flex-col items-center p-8">
+
+      {/* 右上ロゴ */}
+      <div className="fixed top-4 right-4 w-32 h-auto z-50">
+        <img
+          src="/project_Emo_RAMUNE_logo.png"
+          alt="Project Emo-RAMUNE"
+          className="w-full h-auto"
+        />
+      </div>
+
+      <div className="mb-6">
+        <Link href="/">
+          <button className="border px-3 py-1 hover:bg-white hover:text-black transition">
+            ← メインメニューに戻る
+          </button>
+        </Link>
+      </div>
+
+      <h1 className="mb-6 text-center">
+        「忘れないで、私はまだここにいる」
+      </h1>
+
+      <p className="opacity-40 mb-8 text-center">
+        現在アクセス可能な■■■は以下の通りです。
+      </p>
+
+      {/* YouTubeサムネ */}
+      <a href={videoUrl} target="_blank">
+        <img
+          src={thumbnail}
+          alt="hidden video"
+          style={{ maxWidth: "90%", border: "1px solid white" }}
+        />
+      </a>
+
+      {/* ダウンロード画像 */}
+      <div className="mt-12 flex flex-col items-center">
+        <p className="opacity-50 text-sm mb-3">
+          
         </p>
-  
-        {/* サムネ画像 */}
-        <a href={videoUrl} target="_blank">
+
+        <a href={archiveImagePath} download={archiveImageName}>
           <img
-            src={thumbnail}
-            alt="hidden video"
-            style={{ maxWidth: "90%", border: "1px solid white" }}
+            src={archiveImagePath}
+            alt="荳肴?縺ｪ繝輔ぃ繧､繝ｫ縺ｮ萓ｵ蜈･繧堤｢ｺ隱阪＠縺ｾ縺励◆"
+            className="max-w-[300px] border border-white hover:opacity-80 transition cursor-pointer"
           />
         </a>
-        <div className="fixed bottom-2 right-2 text-xs opacity-25 text-white z-30">
-  このサイトはフィクションです。実在の人物・団体とは関係ありません。
-</div>
-      </main>
-    );
-  }
+
+        <p className="text-xs opacity-30 mt-2">
+        荳肴?縺ｪ繝輔ぃ繧､繝ｫ縺ｮ萓ｵ蜈･繧堤｢ｺ隱阪＠縺ｾ縺励◆ダウンロードが可能荳肴?縺ｪ繝輔ぃ繧､繝ｫ縺ｮ萓ｵ蜈･繧堤｢ｺ隱阪＠縺ｾ縺励◆
+        </p>
+      </div>
+
+      <div className="fixed bottom-2 right-2 text-xs opacity-25 text-white z-30">
+        このサイトはフィクションです。実在の人物・団体とは関係ありません。
+      </div>
+
+    </main>
+  );
+}
