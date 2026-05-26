@@ -62,7 +62,7 @@ export default function Hidden() {
         </a>
 
         <p className="text-xs opacity-30 mt-2">
-        隗｣縺肴?縺九○??ダウンロードが%可不明＾能です
+        ＄％ダウンロードが可能です%縺
         </p>
       </div>
 
