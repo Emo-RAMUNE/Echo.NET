@@ -6,10 +6,6 @@ export default function Hidden() {
   const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
   const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
-  // ダウンロード画像
-  const archiveImagePath = "/public/隗｣縺肴?縺九○??.png"; // publicフォルダ内
-  const archiveImageName = "隗｣縺肴?縺九○??.png";
-
   return (
     <main className="bg-blue-800 text-white min-h-screen flex flex-col items-center p-8">
 
@@ -46,23 +42,7 @@ export default function Hidden() {
           style={{ maxWidth: "90%", border: "1px solid white" }}
         />
       </a>
-
-      {/* ダウンロード画像 */}
-      <div className="mt-12 flex flex-col items-center">
-        <p className="opacity-50 text-sm mb-3">
-          
-        </p>
-
-        <a href={archiveImagePath} download={archiveImageName}>
-          <img
-            src={archiveImagePath}
-            alt="隗｣縺肴?縺九○??.png"
-            className="max-w-[300px] border border-white hover:opacity-80 transition cursor-pointer"
-          />
-        </a>
-
-        <p className="text-xs opacity-30 mt-2">
-        ＄％ダウンロードが可能です%縺
+      
         </p>
       </div>
 
