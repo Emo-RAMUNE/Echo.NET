@@ -2,7 +2,7 @@ import Link from "next/dist/client/link";
 
 export default function Hidden() {
 
-  const videoId = "swU7-Yy04Rs"; // ここを変更
+  const videoId = "swU7-Yy04Rs"; // ←ここを変更
   const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
   const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
@@ -42,9 +42,6 @@ export default function Hidden() {
           style={{ maxWidth: "90%", border: "1px solid white" }}
         />
       </a>
-    
-        </p>
-      </div>
 
       <div className="fixed bottom-2 right-2 text-xs opacity-25 text-white z-30">
         このサイトはフィクションです。実在の人物・団体とは関係ありません。
