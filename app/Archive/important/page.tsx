@@ -42,7 +42,7 @@ export default function Hidden() {
           style={{ maxWidth: "90%", border: "1px solid white" }}
         />
       </a>
-      
+    
         </p>
       </div>
 
